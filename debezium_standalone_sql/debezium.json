@@ -1,0 +1,20 @@
+{
+  "name": "sql-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+    "tasks.max": "1",
+    "database.hostname": "sql-server",
+    "database.port": "1433",
+    "database.user": "sa",
+    "database.password": "someThingComplicated1234",
+    "database.server.name": "localhost",
+    "database.names": "ddemosql",
+    "schema.include.list": "dbo",
+    "table.include.list": "dbo.student",
+    "topic.prefix": "student",
+    "database.history.kafka.bootstrap.servers": "kafka:29092",
+    "database.history.kafka.topic": "sql-server.ddemohistory",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:29092",
+    "schema.history.internal.kafka.topic": "schemahistory.student"
+  }
+}
